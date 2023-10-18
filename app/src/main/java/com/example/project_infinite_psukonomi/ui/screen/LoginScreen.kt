@@ -1,4 +1,4 @@
-package com.example.project_infinite_psukonomi.ui.Screen
+package com.example.project_infinite_psukonomi.ui.screen
 
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.layout.Arrangement
