@@ -5,7 +5,7 @@ plugins {
 
 android {
     namespace = "com.example.project_infinite_psukonomi"
-    compileSdk = 33
+    compileSdk = 34
 
     defaultConfig {
         applicationId = "com.example.project_infinite_psukonomi"
