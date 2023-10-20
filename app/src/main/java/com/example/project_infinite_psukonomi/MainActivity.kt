@@ -7,7 +7,7 @@ import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Surface
 import androidx.compose.ui.Modifier
-import com.example.project_infinite_psukonomi.ui.screen.LoginScreen
+import com.example.project_infinite_psukonomi.ui.screen.MainScreen
 import com.example.project_infinite_psukonomi.ui.theme.Project_Infinite_PsukonomiTheme
 
 class MainActivity : ComponentActivity() {
@@ -20,7 +20,7 @@ class MainActivity : ComponentActivity() {
                     modifier = Modifier.fillMaxSize(),
                     color = MaterialTheme.colorScheme.background
                 ) {
-                    LoginScreen()
+                    MainScreen()
                 }
             }
         }
