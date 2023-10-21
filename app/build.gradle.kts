@@ -58,6 +58,10 @@ dependencies {
     implementation("androidx.compose.ui:ui")
     implementation("androidx.compose.ui:ui-graphics")
     implementation("androidx.compose.ui:ui-tooling-preview")
+    //Dependency for json conversion the GSON library.
+    implementation("com.google.code.gson:gson:2.9.0")
+    //Dependency to load image from url
+    implementation("io.coil-kt:coil-compose:2.4.0")
     implementation("androidx.compose.material3:material3")
     testImplementation("junit:junit:4.13.2")
     androidTestImplementation("androidx.test.ext:junit:1.1.5")

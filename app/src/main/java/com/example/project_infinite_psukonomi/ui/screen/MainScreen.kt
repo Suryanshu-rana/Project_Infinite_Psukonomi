@@ -7,6 +7,7 @@ import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.lazy.LazyColumn
+import androidx.compose.foundation.lazy.items
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.FavoriteBorder
 import androidx.compose.material.icons.filled.List
@@ -30,10 +31,11 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
+import com.example.project_infinite_psukonomi.model.Categories
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
-fun MainScreen() {
+fun MainScreen(categories: Categories) {
     val showDialog = remember { mutableStateOf(false) }
     if (showDialog.value) {
         CategoryListPopup(listOf("Food", "Gifts", "Drinks", "Stationary"), setShowDialog = {
@@ -104,11 +106,8 @@ fun MainScreen() {
                 .padding(16.dp)
         ) {
             LazyColumn {
-                item {
-                    DetailList(title = "Food")
-                    DetailList(title = "Gifts")
-                    DetailList(title = "Drinks")
-                    DetailList(title = "Stationary")
+                items(categories.categories) { product ->
+                    DetailList(title = product.name, product)
                 }
             }
         }
@@ -119,5 +118,5 @@ fun MainScreen() {
 @Preview(showSystemUi = true)
 @Composable
 fun Prevfun() {
-    MainScreen()
+//    MainScreen()
 }
